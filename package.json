@@ -1,5 +1,5 @@
 {
-  "name": "exceljs",
+  "name": "@nfdi4plants/exceljs",
   "version": "4.3.0",
   "description": "Excel Workbook Manager - Read and Write xlsx and csv Files.",
   "private": false,
