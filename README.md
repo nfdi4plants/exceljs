@@ -16,10 +16,8 @@ npm install @nfdi4plants/exceljs
 
 
 ## Changes since fork
----
 
-
-**0.0.3**:
+### 0.0.3
 
 - Fix wrong default for `headerRow`. Excel itself does ignore this attribute if true, so read in should be set to `true` if `headerRow === undefined`.
     - In `lib/xlsx/xform/table/table-xform.js`
@@ -30,5 +28,3 @@ npm install @nfdi4plants/exceljs
 - Fix table read in, when file was not written with excel.js
     - In `lib/xlsx/xform/core/relationship-xform.js`
     - [Commit](https://github.com/nfdi4plants/exceljs/commit/8712c24c1e65ef2e5a482f14d36ecfac55e310f0)
-
----
