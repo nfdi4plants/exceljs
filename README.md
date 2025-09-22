@@ -17,6 +17,14 @@ npm install @nfdi4plants/exceljs
 
 ## Changes since fork
 
+### 0.0.4
+
+- Fix reader assuming existence of `appProperties` section which is not existant in files written by ClosedXML and let it ignore unknown `lastModifiedBy` field.
+    - In `lib/xlsx/xlsx.js`
+    - In `lib/xlsx/xform/core/core-xform.js`
+    - [Commit](https://github.com/nfdi4plants/exceljs/commit/b4dd10a12178d5796ac75256780f5a4bbb06cf49)
+    - See https://github.com/fslaborg/FsSpreadsheet/issues/77
+
 ### 0.0.3
 
 - Fix wrong default for `headerRow`. Excel itself does ignore this attribute if true, so read in should be set to `true` if `headerRow === undefined`.
