@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<table xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="xr xr3"
+       xmlns:xr="http://schemas.microsoft.com/office/spreadsheetml/2014/revision"
+       xmlns:xr3="http://schemas.microsoft.com/office/spreadsheetml/2016/revision3"
+       id="1" name="TestTable" displayName="TestTable" ref="A1:D4"
+       totalsRowShown="1" headerRowCount="1">
+    <autoFilter ref="A1:D4">
+        <filterColumn colId="0" hiddenButton="1"/>
+        <filterColumn colId="1" hiddenButton="1"/>
+        <filterColumn colId="2" hiddenButton="1"/>
+        <filterColumn colId="3" hiddenButton="1"/>
+    </autoFilter>
+    <tableColumns count="4">
+        <tableColumn id="1" name="Name" totalsRowLabel="Total"/>
+        <tableColumn id="2" name="Type" totalsRowFunction="custom">
+            <totalsRowFormula>none</totalsRowFormula>
+        </tableColumn>
+        <tableColumn id="3" name="Amount" totalsRowFunction="custom">
+            <totalsRowFormula>SUBTOTAL(109,TestTable[Amount])</totalsRowFormula>
+        </tableColumn>
+        <tableColumn id="4" name="Unit"/>
+    </tableColumns>
+    <tableStyleInfo
+            name="TableStyleMedium2"
+            showFirstColumn="0"
+            showLastColumn="0"
+            showRowStripes="1"
+            showColumnStripes="0"/>
+</table>
