@@ -23,6 +23,26 @@ const expectations = [
     parsedModel: {name: 'Foo', totalsRowFunction: 'Baz'},
     tests: ['render', 'renderIn', 'parse'],
   },
+  {
+    title: 'custom formula',
+    create() {
+      return new TableColumnXform();
+    },
+    preparedModel: {
+      id: 1,
+      name: 'Foo',
+      totalsRowFunction: 'custom',
+      totalsRowFormula: 'SUBTOTAL(109,Table1[Foo])',
+    },
+    xml:
+      '<tableColumn id="1" name="Foo" totalsRowFunction="custom"><totalsRowFormula>SUBTOTAL(109,Table1[Foo])</totalsRowFormula></tableColumn>',
+    parsedModel: {
+      name: 'Foo',
+      totalsRowFunction: 'custom',
+      totalsRowFormula: 'SUBTOTAL(109,Table1[Foo])',
+    },
+    tests: ['render', 'renderIn', 'parse', 'parseIn'],
+  },
 ];
 
 describe('TableColumnXform', () => {

@@ -66,4 +66,6 @@ _SpecRunner.html
 
 # Ignore xlsx files generated during testing
 *.xlsx
+# but keep test input files
+!spec/integration/data/test-arctrl-issue-508.xlsx
 enpm-lock.yaml

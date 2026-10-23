@@ -1,0 +1,46 @@
+{
+  "id": 1,
+  "name": "TestTable",
+  "tableRef": "A1:D4",
+  "autoFilterRef": "A1:D4",
+  "totalsRow": false,
+  "headerRow": true,
+  "columns": [
+    {
+      "id": 1,
+      "colId": "0",
+      "filterButton": false,
+      "name": "Name",
+      "totalsRowLabel": "Total"
+    },
+    {
+      "id": 2,
+      "colId": "1",
+      "filterButton": false,
+      "name": "Type",
+      "totalsRowFunction": "custom",
+      "totalsRowFormula": "none"
+    },
+    {
+      "id": 3,
+      "colId": "2",
+      "filterButton": false,
+      "name": "Amount",
+      "totalsRowFunction": "custom",
+      "totalsRowFormula": "SUBTOTAL(109,TestTable[Amount])"
+    },
+    {
+      "id": 4,
+      "colId": "3",
+      "filterButton": false,
+      "name": "Unit"
+    }
+  ],
+  "style": {
+    "theme": "TableStyleMedium2",
+    "showFirstColumn": false,
+    "showLastColumn": false,
+    "showRowStripes": true,
+    "showColumnStripes": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "TestTable",
+  "displayName": "TestTable",
+  "tableRef": "A1:D4",
+  "autoFilterRef": "A1:D4",
+  "totalsRow": false,
+  "headerRow": true,
+  "columns": [
+    {
+      "filterButton": false,
+      "name": "Name",
+      "totalsRowLabel": "Total"
+    },
+    {
+      "filterButton": false,
+      "name": "Type",
+      "totalsRowFunction": "custom",
+      "totalsRowFormula": "none"
+    },
+    {
+      "filterButton": false,
+      "name": "Amount",
+      "totalsRowFunction": "custom",
+      "totalsRowFormula": "SUBTOTAL(109,TestTable[Amount])"
+    },
+    {
+      "filterButton": false,
+      "name": "Unit"
+    }
+  ],
+  "style": {
+    "theme": "TableStyleMedium2",
+    "showFirstColumn": false,
+    "showLastColumn": false,
+    "showRowStripes": true,
+    "showColumnStripes": false
+  }
+}
