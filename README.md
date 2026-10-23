@@ -1,6 +1,6 @@
 # ExcelJS
 
-[![Build status](https://github.com/exceljs/exceljs/workflows/ExcelJS/badge.svg)](https://github.com/exceljs/exceljs/actions?query=workflow%3AExcelJS)
+https://www.npmjs.com/package/@nfdi4plants/exceljs
 
 Based on [exceljs](https://github.com/exceljs/exceljs) v4.3.0.
 
@@ -8,14 +8,27 @@ Read, manipulate and write spreadsheet data and styles to XLSX and JSON.
 
 Reverse engineered from Excel spreadsheet files as a project.
 
-# Installation
+## Installation
 
 ```shell
 npm install @nfdi4plants/exceljs
 ```
 
+## Upload to npm
+
+```shell
+npm login
+npm build
+npm publish
+```
 
 ## Changes since fork
+
+### 0.0.5
+
+- Fix table read in, when table columns contain child elements such as `<totalsRowFormula>`. The first child element ended the column, so the remaining columns were dropped and reading failed with `Cannot set properties of undefined (setting 'filterButton')`. `totalsRowFormula` is now read into the column model and written back for `totalsRowFunction="custom"`.
+    - In `lib/xlsx/xform/table/table-column-xform.js`
+    - See https://github.com/nfdi4plants/ARCtrl/issues/508
 
 ### 0.0.4
 
